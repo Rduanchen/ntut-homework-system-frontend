@@ -1,0 +1,23 @@
+{
+  "system": {
+    "name": "北科大程式作業繳交系統"
+  },
+  "navigation": {
+    "home": "首頁",
+    "login": "登入"
+  },
+  "login": {
+    "title": "使用者登入",
+    "course": "選擇課程",
+    "username": "使用者名稱",
+    "password": "密碼",
+    "button": "登入",
+    "loginCount": "總登入次數",
+    "invalidCredentials": "帳號或者是密碼錯誤",
+    "savePassword": "記住密碼",
+    "publicComputerWarning": "請勿在公用或共用電腦上使用"
+  },
+  "rules": {
+    "required": "請輸入{field}"
+  }
+}

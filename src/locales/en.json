@@ -1,0 +1,23 @@
+{
+  "system": {
+    "name": "NTUT Homework Submission System"
+  },
+  "navigation": {
+    "home": "Home",
+    "login": "Login"
+  },
+  "login": {
+    "title": "User Login",
+    "course": "Select Course",
+    "username": "Username",
+    "password": "Password",
+    "button": "Login",
+    "loginCount": "Total Logins",
+    "invalidCredentials": "Incorrect username or password.",
+    "savePassword": "Remember password",
+    "publicComputerWarning": "Do not use on public or shared computers."
+  },
+  "rules": {
+    "required": "{field} is required"
+  }
+}
