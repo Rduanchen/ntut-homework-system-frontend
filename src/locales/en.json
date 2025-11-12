@@ -19,5 +19,11 @@
   },
   "rules": {
     "required": "{field} is required"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "homeworkList": "Homework List",
+    "changePassword": "Change Password",
+    "logout": "Logout"
   }
 }

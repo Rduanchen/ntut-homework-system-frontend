@@ -19,5 +19,11 @@
   },
   "rules": {
     "required": "請輸入{field}"
+  },
+  "dashboard": {
+    "title": "主控台",
+    "homeworkList": "作業列表",
+    "changePassword": "更改密碼",
+    "logout": "登出"
   }
 }
