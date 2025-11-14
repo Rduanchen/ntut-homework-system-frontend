@@ -25,5 +25,15 @@
     "homeworkList": "Homework List",
     "changePassword": "Change Password",
     "logout": "Logout"
+  },
+  "uploadComponent": {
+    "selectFile": "Select File",
+    "dropFile": "or drag and drop file here",
+    "uploadButton": "Upload",
+    "fileTooLarge": "File size exceeds the limit of {maxSize} MB.",
+    "noFileSelected": "No file selected.",
+    "uploading": "Uploading...",
+    "uploadSuccess": "File uploaded successfully.",
+    "uploadError": "Error uploading file. Please try again."
   }
 }

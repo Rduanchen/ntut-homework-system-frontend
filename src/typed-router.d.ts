@@ -22,6 +22,7 @@ declare module 'vue-router/auto-routes' {
     '/dashboard/ChangePassword': RouteRecordInfo<'/dashboard/ChangePassword', '/dashboard/ChangePassword', Record<never, never>, Record<never, never>>,
     '/dashboard/HomeWorkList': RouteRecordInfo<'/dashboard/HomeWorkList', '/dashboard/HomeWorkList', Record<never, never>, Record<never, never>>,
     '/Login': RouteRecordInfo<'/Login', '/Login', Record<never, never>, Record<never, never>>,
+    '/PuzzleView': RouteRecordInfo<'/PuzzleView', '/PuzzleView', Record<never, never>, Record<never, never>>,
   }
 
   /**
@@ -49,6 +50,10 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/Login.vue': {
       routes: '/Login'
+      views: never
+    }
+    'src/pages/PuzzleView.vue': {
+      routes: '/PuzzleView'
       views: never
     }
   }

@@ -39,6 +39,11 @@ const routes = [
     path: '/:pathMatch(.*)*',
     redirect: '/',
   },
+  {
+    path: '/puzzle',
+    name: 'PuzzleView',
+    component: () => import('@/pages/PuzzleView.vue'),
+  },
 ];
 
 const router = createRouter({

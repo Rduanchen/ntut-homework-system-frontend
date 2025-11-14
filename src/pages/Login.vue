@@ -199,7 +199,6 @@
       router.push('/dashboard');
     } catch (error) {
       loginError.value = t('login.invalidCredentials');
-      console.error('Login failed:', error);
     } finally {
       loading.value = false;
     }

@@ -1,68 +1,74 @@
 <template>
-  <v-card class="pa-4 pa-sm-8" max-width="400" variant="flat">
-    <v-card-title class="text-h5 font-weight-bold text-center mb-6">
-      <v-icon icon="mdi-lock-reset" class="mr-2" size="large"></v-icon>
-      更改密碼
-    </v-card-title>
+  <v-container class="fill-height" fluid>
+    <v-row align="center" justify="center">
+      <v-col cols="12" sm="10" md="8" lg="6">
+        <v-card class="pa-4 pa-sm-8" max-width="400" variant="flat">
+          <v-card-title class="text-h5 font-weight-bold text-center mb-6">
+            <v-icon icon="mdi-lock-reset" class="mr-2" size="large"></v-icon>
+            更改密碼
+          </v-card-title>
 
-    <v-form @submit.prevent="handleChangePassword" ref="formRef" :disabled="isLoading">
-      <v-text-field
-        v-model="oldPassword"
-        :rules="[requiredRule]"
-        :type="showOldPassword ? 'text' : 'password'"
-        :append-inner-icon="showOldPassword ? 'mdi-eye' : 'mdi-eye-off'"
-        @click:append-inner="showOldPassword = !showOldPassword"
-        label="舊密碼"
-        variant="outlined"
-        density="comfortable"
-        class="mb-4"
-      ></v-text-field>
+          <v-form @submit.prevent="handleChangePassword" ref="formRef" :disabled="isLoading">
+            <v-text-field
+              v-model="oldPassword"
+              :rules="[requiredRule]"
+              :type="showOldPassword ? 'text' : 'password'"
+              :append-inner-icon="showOldPassword ? 'mdi-eye' : 'mdi-eye-off'"
+              @click:append-inner="showOldPassword = !showOldPassword"
+              label="舊密碼"
+              variant="outlined"
+              density="comfortable"
+              class="mb-4"
+            ></v-text-field>
 
-      <v-text-field
-        v-model="newPassword"
-        :rules="[requiredRule, passwordMatchRule]"
-        :type="showNewPassword ? 'text' : 'password'"
-        :append-inner-icon="showNewPassword ? 'mdi-eye' : 'mdi-eye-off'"
-        @click:append-inner="showNewPassword = !showNewPassword"
-        label="新密碼"
-        variant="outlined"
-        density="comfortable"
-        class="mb-4"
-      ></v-text-field>
+            <v-text-field
+              v-model="newPassword"
+              :rules="[requiredRule, passwordMatchRule]"
+              :type="showNewPassword ? 'text' : 'password'"
+              :append-inner-icon="showNewPassword ? 'mdi-eye' : 'mdi-eye-off'"
+              @click:append-inner="showNewPassword = !showNewPassword"
+              label="新密碼"
+              variant="outlined"
+              density="comfortable"
+              class="mb-4"
+            ></v-text-field>
 
-      <v-text-field
-        v-model="confirmPassword"
-        :rules="[requiredRule, passwordMatchRule]"
-        :type="showNewPassword ? 'text' : 'password'"
-        label="確認新密碼"
-        variant="outlined"
-        density="comfortable"
-        class="mb-6"
-      ></v-text-field>
+            <v-text-field
+              v-model="confirmPassword"
+              :rules="[requiredRule, passwordMatchRule]"
+              :type="showNewPassword ? 'text' : 'password'"
+              label="確認新密碼"
+              variant="outlined"
+              density="comfortable"
+              class="mb-6"
+            ></v-text-field>
 
-      <v-alert
-        v-if="feedbackMessage"
-        :type="isSuccess ? 'success' : 'error'"
-        variant="tonal"
-        class="mb-6"
-        closable
-        @click:close="clearFeedback"
-      >
-        {{ feedbackMessage }}
-      </v-alert>
+            <v-alert
+              v-if="feedbackMessage"
+              :type="isSuccess ? 'success' : 'error'"
+              variant="tonal"
+              class="mb-6"
+              closable
+              @click:close="clearFeedback"
+            >
+              {{ feedbackMessage }}
+            </v-alert>
 
-      <v-btn
-        type="submit"
-        :loading="isLoading"
-        color="primary"
-        block
-        size="large"
-        class="text-body-1"
-      >
-        更改
-      </v-btn>
-    </v-form>
-  </v-card>
+            <v-btn
+              type="submit"
+              :loading="isLoading"
+              color="primary"
+              block
+              size="large"
+              class="text-body-1"
+            >
+              更改
+            </v-btn>
+          </v-form>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script setup lang="ts">
@@ -131,7 +137,7 @@
       formRef.value.resetValidation();
       // 延遲五秒
       setTimeout(() => {
-        router.push('/login');  
+        router.push('/login');
       }, 4000);
     } catch (error: any) {
       // 錯誤處理

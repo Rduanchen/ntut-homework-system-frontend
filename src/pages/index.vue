@@ -1,6 +1,6 @@
 <template>
   <v-app id="inspire">
-    <v-system-bar> </v-system-bar>
+    <v-system-bar>北科大作業系統 | NTUT homework System</v-system-bar>
     <v-navigation-drawer v-model="drawer">
       <v-sheet class="pa-4" color="grey-lighten-4">
         <v-avatar class="mb-4" color="grey-darken-1" size="64"></v-avatar>
@@ -13,13 +13,21 @@
       <v-list>
         <v-list-item
           class="list-item"
+          prepend-icon="mdi-view-dashboard"
+          :title="t('dashboard.title')"
+          @click="$router.push('/')"
+        ></v-list-item>
+        <v-list-item
+          class="list-item"
           prepend-icon="mdi-calendar-check"
           :title="t('dashboard.homeworkList')"
+          @click="$router.push('/homework')"
         ></v-list-item>
         <v-list-item
           class="list-item"
           prepend-icon="mdi-key-variant"
           :title="t('dashboard.changePassword')"
+          @click="$router.push('/change-password')"
         ></v-list-item>
         <v-list-item
           class="list-item"
@@ -83,6 +91,7 @@
       userInfo.value = response;
     } catch (error) {
       console.error('Error fetching user info:', error);
+      router.push('/login');
     }
   });
 
@@ -98,7 +107,7 @@
   };
 </script>
 <style scoped>
-.list-item {
-  cursor: pointer;
-}
+  .list-item {
+    cursor: pointer;
+  }
 </style>

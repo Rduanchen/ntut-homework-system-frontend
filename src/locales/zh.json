@@ -25,5 +25,16 @@
     "homeworkList": "作業列表",
     "changePassword": "更改密碼",
     "logout": "登出"
+  },
+  "uploadComponent": {
+    "selectFile": "選擇檔案",
+    "dropFile": "或將檔案拖曳至此處",
+    "uploadButton": "上傳",
+    "fileTooLarge": "檔案大小超過限制 {maxSize} MB。",
+    "noFileSelected": "尚未選擇檔案。",
+    "uploading": "上傳中...",
+    "uploadSuccess": "檔案上傳成功。",
+    "uploadError": "檔案上傳失敗，請再試一次。",
+    "uploadAlready": "您已經上傳過此作業。"
   }
 }

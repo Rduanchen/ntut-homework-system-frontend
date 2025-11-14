@@ -17,5 +17,6 @@ declare module 'vue' {
     HomeworkList: typeof import('./components/HomeworkList.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    UploadFile: typeof import('./components/UploadFile.vue')['default']
   }
 }
